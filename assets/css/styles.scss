@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: rgba(11,17,29,255);
+    
+    header{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        input{
+            border: 0;
+            outline: 0;
+            padding: 10px 25px;
+            margin: 10px 0px 10px 10px;
+            background-color: rgba(32,44,60,255);
+            color: #fff;
+            border-radius: 10px;
+            flex: 1;
+            font-size: 18px;
+        
+        }
+        button{
+            border: 0;
+            outline: 0;
+            margin: 0 10px;
+            background-color: rgba(32,44,60,255);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+    }
+}
+.container{
+    // max-width: 470px;
+    margin: 10px;
+    color: #fff;
+    border-radius: 20px;
+    // padding: 40px 35px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    // width: 90%;
+    // margin: 100px auto 0;
+    .weather{
+        h1{
+            font-size: 30px;
+            font-weight: 300;
+        }
+        h2{
+            font-size: 20px;
+            font-weight: 100;
+            // margin-top: -10px;
+        }
+    }
+    .weather-icon{
+        width: 150px;
+    }
+    .details{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .col{
+            img{
+                margin: 20px;
+                width: 50px;
+                height: 45px;
+            }
+        }
+    }
+}
+section{
+    padding: 1rem;
+    .day-card{
+        max-width: 470px;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+        border-radius: 10px;
+        padding: 0.25px;
+        margin: 10px 0;
+        color: #fff;
+        background-color: rgba(32,44,60,255);
+        
+        .day-weather-icon{
+            width: 100px;
+        }
+    }
+    .day-card-date{
+        font-size: 20px;
+        color: #fff;
+        margin-top: 0.5rem;
+    }
+}
+.history-container{
+    display: none;
+}
+@media only screen and (max-width: 489px) {
+    main{
+        .container{
+            max-width: 470px;
+        }
+    }
+}
+
+@media only screen and (min-width: 490px) {
+    body{
+        header{
+            width: 70%;
+            input{
+                width: 60%;
+            }
+            .hamburger{
+                display: none;
+            }
+        }
+        main{
+            display: flex;
+            justify-content: space-between;
+            margin: 0 20px;
+            .left-part{
+                width: 80%;
+                .container{
+                    margin: 10px;
+                    color: #fff;
+                    border-radius: 20px;
+                    text-align: center;
+                    display: flex;
+                    justify-content: space-around;
+                    .details{
+                        display: flex;
+                        align-items: center;
+                        .col{
+                            justify-content: space-between;
+                            img{
+                                margin: 20px;
+                                width: 50px;
+                                height: 45px;
+                            }
+                        }
+                    }
+                }
+            }
+            section{
+                padding: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.5rem;
+                .day-card{
+                    display: block;
+                    justify-content: center;
+                    border-radius: 10px;
+                    width: 130px;
+                }
+            }
+        }
+    }
+    
+    .right-part{
+        width: 30%;
+        .history-container{
+            background-color: rgba(32,44,60,255);
+            display: block;
+            width: 100%;
+            height: 90vh;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+    }
+}
