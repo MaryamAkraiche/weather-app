@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: rgb(11, 17, 29);
+  background-color: #0b111d;
 }
 body header {
   width: 100%;
@@ -17,7 +17,7 @@ body header input {
   outline: 0;
   padding: 10px 25px;
   margin: 10px 0px 10px 10px;
-  background-color: rgb(32, 44, 60);
+  background-color: #202b3d;
   color: #fff;
   border-radius: 10px;
   flex: 1;
@@ -27,7 +27,7 @@ body header button {
   border: 0;
   outline: 0;
   margin: 0 10px;
-  background-color: rgb(32, 44, 60);
+  background-color: #202b3d;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -77,7 +77,7 @@ section .day-card {
   padding: 0.25px;
   margin: 10px 0;
   color: #fff;
-  background-color: rgb(32, 44, 60);
+  background-color: #202b3d;
 }
 section .day-card .day-weather-icon {
   width: 100px;
@@ -88,13 +88,34 @@ section .day-card-date {
   margin-top: 0.5rem;
 }
 
-.history-container {
-  display: none;
-}
-
 @media only screen and (max-width: 489px) {
   main .container {
     max-width: 470px;
+  }
+  .history-container {
+    display: none;
+    position: fixed;
+    top: 55px;
+    left: 145px;
+    width: 60vw;
+    height: 80vh;
+    border-radius: 10px;
+    background-color: #202b3d;
+    z-index: 999;
+  }
+  .history-container.visible {
+    display: block;
+  }
+  .history-container.visible .weather-history {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .history-container.visible .weather-history img {
+    width: 50px;
+  }
+  .history-container.visible .weather-history h1, .history-container.visible .weather-history h2 {
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 490px) {
@@ -152,11 +173,22 @@ section .day-card-date {
     width: 30%;
   }
   .right-part .history-container {
-    background-color: rgb(32, 44, 60);
+    background-color: #202b3d;
     display: block;
     width: 100%;
     height: 90vh;
     border-radius: 10px;
     margin-right: 20px;
+  }
+  .right-part .history-container .weather-history {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .right-part .history-container .weather-history img {
+    width: 80px;
+  }
+  .right-part .history-container .weather-history h1, .right-part .history-container .weather-history h2 {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=styles.css.map */

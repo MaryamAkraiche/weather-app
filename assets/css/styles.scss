@@ -1,32 +1,33 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
-body{
-    background-color: rgba(11,17,29,255);
-    
-    header{
+body {
+    background-color: #0b111d;
+
+    header {
         width: 100%;
         display: flex;
         align-items: center;
-        input{
+
+        input {
             border: 0;
             outline: 0;
             padding: 10px 25px;
             margin: 10px 0px 10px 10px;
-            background-color: rgba(32,44,60,255);
+            background-color: #202b3d;
             color: #fff;
             border-radius: 10px;
             flex: 1;
             font-size: 18px;
-        
         }
-        button{
+
+        button {
             border: 0;
             outline: 0;
             margin: 0 10px;
-            background-color: rgba(32,44,60,255);
+            background-color: #202b3d;
             border-radius: 50%;
             width: 40px;
             height: 40px;
@@ -34,37 +35,38 @@ body{
         }
     }
 }
-.container{
-    // max-width: 470px;
+
+.container {
     margin: 10px;
     color: #fff;
     border-radius: 20px;
-    // padding: 40px 35px;
     text-align: center;
     display: flex;
     justify-content: space-around;
-    // width: 90%;
-    // margin: 100px auto 0;
-    .weather{
-        h1{
+
+    .weather {
+        h1 {
             font-size: 30px;
             font-weight: 300;
         }
-        h2{
+
+        h2 {
             font-size: 20px;
             font-weight: 100;
-            // margin-top: -10px;
         }
     }
-    .weather-icon{
+
+    .weather-icon {
         width: 150px;
     }
-    .details{
+
+    .details {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        .col{
-            img{
+
+        .col {
+            img {
                 margin: 20px;
                 width: 50px;
                 height: 45px;
@@ -72,9 +74,11 @@ body{
         }
     }
 }
-section{
+
+section {
     padding: 1rem;
-    .day-card{
+
+    .day-card {
         max-width: 470px;
         display: flex;
         justify-content: space-around;
@@ -84,59 +88,101 @@ section{
         padding: 0.25px;
         margin: 10px 0;
         color: #fff;
-        background-color: rgba(32,44,60,255);
-        
-        .day-weather-icon{
+        background-color: #202b3d;
+
+        .day-weather-icon {
             width: 100px;
         }
     }
-    .day-card-date{
+
+    .day-card-date {
         font-size: 20px;
         color: #fff;
         margin-top: 0.5rem;
     }
+    // .weather-history{
+    //     display: flex;
+    //     justify-content: space-around;
+    // }
 }
-.history-container{
-    display: none;
-}
+
+
+
 @media only screen and (max-width: 489px) {
-    main{
-        .container{
+    main {
+        .container {
             max-width: 470px;
+        }
+    }
+    .history-container {
+        display: none; 
+        position: fixed;
+        top: 55px;
+        left: 145px;
+        width: 60vw;
+        height: 80vh;
+        border-radius: 10px;
+        background-color: #202b3d;
+        z-index: 999;
+        &.visible {
+            display: block;
+    
+            .weather-history {
+                // width: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+    
+                img {
+                    width: 50px;
+                }
+    
+                h1, h2 {
+                    font-size: 16px;
+                }
+            }
         }
     }
 }
 
 @media only screen and (min-width: 490px) {
-    body{
-        header{
+    body {
+        header {
             width: 70%;
-            input{
+
+            input {
                 width: 60%;
             }
-            .hamburger{
+
+            .hamburger {
                 display: none;
             }
         }
-        main{
+
+        main {
             display: flex;
             justify-content: space-between;
             margin: 0 20px;
-            .left-part{
+
+            .left-part {
                 width: 80%;
-                .container{
+
+                .container {
                     margin: 10px;
                     color: #fff;
                     border-radius: 20px;
                     text-align: center;
                     display: flex;
                     justify-content: space-around;
-                    .details{
+
+                    .details {
                         display: flex;
                         align-items: center;
-                        .col{
+
+                        .col {
                             justify-content: space-between;
-                            img{
+
+                            img {
                                 margin: 20px;
                                 width: 50px;
                                 height: 45px;
@@ -145,13 +191,15 @@ section{
                     }
                 }
             }
-            section{
+
+            section {
                 padding: 1rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 0.5rem;
-                .day-card{
+
+                .day-card {
                     display: block;
                     justify-content: center;
                     border-radius: 10px;
@@ -160,16 +208,32 @@ section{
             }
         }
     }
-    
-    .right-part{
+
+    .right-part {
         width: 30%;
-        .history-container{
-            background-color: rgba(32,44,60,255);
+
+        .history-container {
+            background-color: #202b3d;
             display: block;
             width: 100%;
             height: 90vh;
             border-radius: 10px;
             margin-right: 20px;
+
+            .weather-history {
+                // width: 80px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                img {
+                    width: 80px;
+                }
+
+                h1, h2 {
+                    font-size: 20px;
+                }
+            }
         }
     }
 }
